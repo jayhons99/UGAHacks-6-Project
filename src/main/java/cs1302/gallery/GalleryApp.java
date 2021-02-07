@@ -90,7 +90,7 @@ public class GalleryApp extends Application {
 
     public void signUpPage(Stage stage) {
 	StackPane pane = new StackPane();
-	Rectangle colorBackground = new Rectangle(1024, 572);
+	Rectangle colorBackground = new Rectangle(1024, 576);
 	Rectangle whiteBackground = new Rectangle(350, 350);
 	colorBackground.setFill(Color.LIGHTPINK);
 	whiteBackground.setFill(Color.WHITE);
@@ -154,7 +154,7 @@ public class GalleryApp extends Application {
 	// Change Scene
 	pane.getChildren().addAll(colorBackground, whiteBackground, signUpGrid, box);
 	
-	Scene signedUp = new Scene(pane, 1280, 5720);
+	Scene signedUp = new Scene(pane, 1024, 576);
 	stage.setScene(signedUp);
 
     }
@@ -178,7 +178,7 @@ public class GalleryApp extends Application {
 	pane.getChildren().addAll(colorBackground, whiteBackground, signedInMessage);
 	
 	
-	signedIn = new Scene(pane, 1280, 5720);
+	signedIn = new Scene(pane, 1024, 576);
 	stage.setScene(signedIn);
     }
 
