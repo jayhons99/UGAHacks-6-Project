@@ -61,6 +61,8 @@ public class GalleryApp extends Application {
 	// Add Grid / Background to Scene
 	pane.getChildren().addAll(colorBackground, whiteBackground, grid);
 
+	Scene scene = new Scene(pane, 1024, 576);
+		
 	// Button Functionality
 	signIn.setOnAction(new EventHandler<ActionEvent>() {
 		@Override
@@ -72,11 +74,10 @@ public class GalleryApp extends Application {
 	signUp.setOnAction(new EventHandler<ActionEvent>() {
 		@Override
 		public void handle(ActionEvent e) {
-		    signUpPage(stage);
+		    signUpPage(stage, scene);
 		}
 	    });
 	
-        Scene scene = new Scene(pane, 1024, 576);
 
 	// These are the texts for the username and pass for sign in.
 	String usernameText = userField.getText();
@@ -88,7 +89,7 @@ public class GalleryApp extends Application {
         stage.show();
     } // start
 
-    public void signUpPage(Stage stage) {
+    public void signUpPage(Stage stage, Scene scene) {
 	StackPane pane = new StackPane();
 	Rectangle colorBackground = new Rectangle(1024, 576);
 	Rectangle whiteBackground = new Rectangle(350, 350);
@@ -144,6 +145,8 @@ public class GalleryApp extends Application {
 		} else {
 		    text.setText("Your passwords do NOT match. Please try again.");
 		}
+
+		stage.setScene(scene);
 	    });
 	
 	// Add Buttons to Grid
